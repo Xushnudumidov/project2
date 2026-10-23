@@ -1,11 +1,15 @@
-count = 0
+kontaktlar = {"Ali": "+998901234567", "Vali": "+998919876543"}
+
 while True:
-    parol = input("parol kiriting")
-    if parol == "1234":
-        print("parol to`g`ri")
+    ism = input("Ism kiriting (chiqish uchun 'stop'): ")
+    
+    if ism == 'stop':
         break
-    elif count == 3:
-        print("siz 3 marta xato kiritdingiz")
-        break
+        
+    if ism in kontaktlar:
+        print("Raqami:", kontaktlar[ism])
     else:
-        print("parol xato qayta urinib ko`ring")
+        print("Bu ism topilmadi!")
+        yangi_raqam = input(ism + " uchun yangi raqam kiriting: ")
+        kontaktlar[ism] = yangi_raqam
+        print("Kontakt qo'shildi!")
