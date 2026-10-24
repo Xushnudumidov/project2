@@ -1,2 +1,4 @@
-for i in range(1, 100):
-    print(i)
+while False:
+    ism=input("Ismingizni kiriting:(toxtash uchun 'stop' yozing) ")
+    if ism == 'stop':
+        break
